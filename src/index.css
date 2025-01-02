@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-blue: #1a75ff;
+  --primary-grey: #b3b3b3;
+  --light-grey: #e6e6e6;
+  --whitish: #d9d9d9;
+  --dark-grey: #333333;
+  --dark-blue: #104699;
+  --blackish: #121212;
+}
+
+body {
+  font-family: "Montserrat Alternates", sans-serif !important;
+  background-color: #121212 !important;
+}
+
+.gradient-color {
+  /* background: hsla(216, 100%, 55%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(216, 100%, 55%, 1) 0%,
+    hsla(216, 81%, 33%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(216, 100%, 55%, 1) 0%,
+    hsla(216, 81%, 33%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(216, 100%, 55%, 1) 0%,
+    hsla(216, 81%, 33%, 1) 100%
+  ); */
+
+  background: linear-gradient(to right, #1a75ff 0%, #104699 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #1a75ff 0%, #104699 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#1A75FF", endColorstr="#104699", GradientType=1 ); */
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-flash {
+  animation: flash 300ms ease-out;
+}
